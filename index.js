@@ -3,7 +3,7 @@ const app = express();
 const { PORT } = require('./config');
 
 const apiRouter = require('./routes/api');
-
+require('./db/mongoose');
 app.use('/', apiRouter);
 
 
