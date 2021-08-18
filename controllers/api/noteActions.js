@@ -4,9 +4,15 @@ class NoteActions {
         console.log('req.body.title ---', req.body)
         const title = req.body.title;
         const body = req.body.body;
-        const note = new Note({ title, body});
-        await note.save();
-        res.status(200).json(note);
+        let note;
+        try{
+           note = new Note({ title, body});
+           await note.save();
+           res.status(200).json(note);
+        }
+        catch(err){
+             return res.status(422).json({message: err.message});
+        }
 
     }
     
