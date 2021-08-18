@@ -9,7 +9,7 @@ body: {
     type: String,
     required: true
 }
-}) ;
+});
 
 
 
