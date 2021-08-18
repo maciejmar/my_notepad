@@ -1,0 +1,36 @@
+.note{
+    background-color: rgb(182, 223, 221);
+    border-radius:6px;
+    padding: 12px 20px;
+    text-align: left;
+    margin: 10px;
+}
+.description {
+    display:block;
+    color:#282c34;
+    font-style:normal;
+    margin-bottom: 20px;
+}
+.note p {
+    color:#000;
+    font-weight: bold;
+    cursor:pointer;
+
+}
+.note button {
+    margin: 2px;
+    background-color: rgb(180, 162, 212);
+    color:#fff;
+    border:0;
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor:pointer;
+
+}
+.note button:hover {
+    background-color: rgb(85, 168, 164);
+}
+.note button.delete {
+    background-color: rgb(165, 34, 34);
+    color: #fff;
+}
