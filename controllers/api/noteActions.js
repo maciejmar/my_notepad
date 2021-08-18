@@ -1,23 +1,26 @@
 const Note =  require('../../db/models/note');
 class NoteActions {
-    saveNote (req,res)  {
-        const newNote = new Note({
-            title: 'zakup sprzętu', 
-            body: 'komputer, monitor, mysz'
+    async saveNote (req,res)  {
+        console.log('req.body.title ---', req.body.title)
+        const title = req.body.title;
+        const body = req.body.body;
+        const note = new Note({ title, body});
+        await note.save();
+        res.status(200).json(note);
 
-        });
-        newNote.save().then (()=> {
-            console.log('notatka zapisana');
-
-        });
-        res.send('strona działa poprawnie');
     }
-    getAllNotes(req,res) {
-        res.send('API works!')
+    
+    async getAllNotes(req,res) {
+        const doc = await Note.find({});
+        res.status(200).json(doc);
+        
     }
-    getNote(req,res) {
+    
+    async getNote(req,res) {
         const id = req.params.id;
-        res.send('This is the note '+ id);
+        const note = await Note.findOne({ _id: id});
+
+        res.status(200).json(note);
         
     }
     updateNote(req,res) {
