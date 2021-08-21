@@ -34,3 +34,6 @@
     background-color: rgb(165, 34, 34);
     color: #fff;
 }
+.note button.delete:hover {
+    background-color: rgb(235, 124, 116);
+  }
