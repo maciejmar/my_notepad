@@ -40,3 +40,22 @@ input {
 .App-link {
   color: #61dafb;
 }
+
+button {
+  color: rgb(114, 43, 43);
+  background-color: rgb(117, 156, 143);
+  width:fit-content;
+  height:fit-content;
+  padding:10px;
+  margin: 3px 3px 3px 3px;
+  font-weight:bolder;
+  font-size:1.3rem;
+  border: 2px solid rgb(67, 18, 87);
+  border-radius: 20px 20px;
+
+}
+button:hover {
+  color: rgb(117, 156, 143);
+  background-color: rgb(114, 43, 43);
+  transform: translateY(8px);
+}
