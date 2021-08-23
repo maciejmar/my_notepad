@@ -76,7 +76,7 @@ class Notes extends React.Component {
         return(
             <div>
                <NotificationContainer />
-               <p>Aktualne notatki:</p>
+               <p class="title" >Aktualne notatki:</p>
                 <NewNote
                     onAdd = {(note)=> this.addNote(note) }
                 />

@@ -6,6 +6,9 @@ p {
   color: #f7f8cb;
   
 }
+p.title {
+  font-size:3rem;
+}
 
 input {
   display: block;
